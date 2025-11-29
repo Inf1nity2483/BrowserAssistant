@@ -11,6 +11,9 @@ model: str //example gpt-4o-mini
 
 # Запуск
 `python -m venv Venv`
+
 `source .\Venv\Scripts\bin` или `.\Venv\Scripts\activate` для win
+
 `pip install -r .\requirements.txt`
+
 `python main.py`
