@@ -4,7 +4,7 @@ from pydantic import BaseModel
 class NextAction(BaseModel):
     function: str
     args: dict
-    reason: str
+    reason: Optional[str] = None
 
 class MissingData(BaseModel):
     field: str
@@ -12,6 +12,9 @@ class MissingData(BaseModel):
 
 class AssistantResponse(BaseModel):
     action_sequence: Optional[list[NextAction]] = None
-    status: str
+    status: str 
     current_goal: str
     missing_data: Optional[list[MissingData]] = None
+
+class ResponseXpath(BaseModel):
+    xpath: str
